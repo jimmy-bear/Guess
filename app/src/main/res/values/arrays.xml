@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="Level">
+        <item>"100"</item>
+        <item>"500"</item>
+        <item>"1000"</item>
+    </array>
+
+</resources>

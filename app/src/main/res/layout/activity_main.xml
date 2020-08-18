@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please Enter1-100"
+        android:text="Please Enter Number"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +80,10 @@
 
     <TextView
         android:id="@+id/txMin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80sp"
+        android:layout_height="60sp"
+        android:background="@drawable/green"
+        android:gravity="center"
         android:text="0"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -106,8 +108,10 @@
 
     <TextView
         android:id="@+id/txMax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80sp"
+        android:layout_height="60sp"
+        android:background="@drawable/green"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,8 +121,10 @@
 
     <TextView
         android:id="@+id/txBetween"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80sp"
+        android:layout_height="60sp"
+        android:background="@drawable/red"
+        android:gravity="center"
         android:text="?"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
@@ -135,5 +141,13 @@
         app:layout_constraintBottom_toBottomOf="@+id/txNumber"
         app:layout_constraintEnd_toStartOf="@+id/txNumber"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.guess
 
 import android.content.Context
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -10,7 +11,7 @@ import java.lang.NumberFormatException
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private val secretGame=SecretGame()
+    private var secretGame=SecretGame()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +41,22 @@ class MainActivity : AppCompatActivity() {
                 .setNeutralButton("Cancel",null)
                 .show()
         }
+        btnLevel.setOnClickListener {
+            var level=0
+            AlertDialog.Builder(this)
+                .setTitle("Choose Level")
+                .setItems(R.array.Level){ _, where ->
+                    when(where){
+                        0->level=0
+                        1->level=1
+                        2->level=2
+                    }
+                    secretGame.setLevel(level)
+                    secretGame.resetGame()
+                    secretGameReset()
+                }
+                .show()
+        }
         btnReplay.setOnClickListener {
             AlertDialog.Builder(this)
                 .setMessage("Are you sure?")
@@ -64,7 +81,14 @@ class MainActivity : AppCompatActivity() {
                         secretGame.minValue=number
                         txMin.text=secretGame.minValue.toString()
                     }
-                    "You got it" -> txBetween.text=number.toString()
+                    "You got it" -> {
+                        txBetween.text = number.toString()
+                        AlertDialog.Builder(this)
+                            .setTitle("congratulation")
+                            .setMessage("You got it !")
+                            .setPositiveButton("OK",null)
+                            .show()
+                    }
                     "ErrorNumber" -> {
                         AlertDialog.Builder(this)
                             .setMessage("Please Enter ${secretGame.minValue}-${secretGame.maxValue}")
