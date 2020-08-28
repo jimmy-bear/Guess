@@ -6,148 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Please Enter Number"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
-
-    <EditText
-        android:id="@+id/edNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="number|textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/btnGuess"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Guess"
-        app:layout_constraintEnd_toEndOf="@+id/edNumber"
-        app:layout_constraintStart_toStartOf="@+id/edNumber"
-        app:layout_constraintTop_toBottomOf="@+id/edNumber" />
-
-    <Button
-        android:id="@+id/btnReplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Replay"
-        app:layout_constraintBottom_toBottomOf="@+id/btnGuess"
+        android:text="Choose Your Game"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnGuess"
-        app:layout_constraintTop_toTopOf="@+id/btnGuess" />
-
-    <TextView
-        android:id="@+id/txNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
-
-    <TextView
-        android:id="@+id/txMin"
-        android:layout_width="80sp"
-        android:layout_height="60sp"
-        android:background="@drawable/green"
-        android:gravity="center"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="0" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.7" />
-
-    <TextView
-        android:id="@+id/txMax"
-        android:layout_width="80sp"
-        android:layout_height="60sp"
-        android:background="@drawable/green"
-        android:gravity="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="2" />
-
-    <TextView
-        android:id="@+id/txBetween"
-        android:layout_width="80sp"
-        android:layout_height="60sp"
-        android:background="@drawable/red"
-        android:gravity="center"
-        android:text="?"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/imageBGuessMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Time:"
-        app:layout_constraintBottom_toBottomOf="@+id/txNumber"
-        app:layout_constraintEnd_toStartOf="@+id/txNumber"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:srcCompat="@drawable/guess" />
 
-    <Button
-        android:id="@+id/btnLevel"
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Level"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:text="GuessSecretGame"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="StartleSecretGame"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9" />
+
+    <ImageButton
+        android:id="@+id/imageBStartleMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:srcCompat="@drawable/shocked" />
+
+    <TextView
+        android:id="@+id/txNoteMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#2DFFC107"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Note"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartleGameActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter Number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <EditText
+        android:id="@+id/edNumberStartle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnGuessStartle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Guess"
+        app:layout_constraintEnd_toEndOf="@+id/edNumberStartle"
+        app:layout_constraintStart_toStartOf="@+id/edNumberStartle"
+        app:layout_constraintTop_toBottomOf="@+id/edNumberStartle" />
+
+    <Button
+        android:id="@+id/btnReplayStartle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Replay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txNumberStartle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <TextView
+        android:id="@+id/txMinStartle"
+        android:layout_width="80sp"
+        android:layout_height="60sp"
+        android:background="@drawable/green"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/txMaxStartle"
+        android:layout_width="80sp"
+        android:layout_height="60sp"
+        android:background="@drawable/green"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2" />
+
+    <TextView
+        android:id="@+id/txBetweenStartle"
+        android:layout_width="wrap_content"
+        android:layout_height="60sp"
+        android:background="@drawable/red"
+        android:gravity="center"
+        android:text="unKnown"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Time:"
+        app:layout_constraintBottom_toBottomOf="@+id/txNumberStartle"
+        app:layout_constraintEnd_toStartOf="@+id/txNumberStartle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLevelStartle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
